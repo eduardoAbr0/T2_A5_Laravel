@@ -257,10 +257,10 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
-    'logout_url' => 'logout',
+    'dashboard_url' => 'alumnos',
+    'logout_url' => 'signout',
     'login_url' => 'login',
-    'register_url' => 'register',
+    'register_url' => 'registration',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
     'profile_url' => false,
