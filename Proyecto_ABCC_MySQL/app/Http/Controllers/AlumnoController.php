@@ -36,18 +36,18 @@ class AlumnoController extends Controller
     public function update(Request $request,int $id){
         $alumno = Alumno::find($id);
 
-        $alumno->NumControl = $request->input('Num_Control');
+        $alumno->Num_Control = $request->input('Num_Control');
         $alumno->Nombre = $request->input('Nombre');
-        $alumno->PrimerAp = $request->input('Primer_Ap');
-        $alumno->SegundoAp = $request->input('Segundo_Ap');
-        $alumno->FechaNac = $request->input('Fecha_Nac');
+        $alumno->Primer_Ap = $request->input('Primer_Ap');
+        $alumno->Segundo_Ap = $request->input('Segundo_Ap');
+        $alumno->Fecha_Nac = $request->input('Fecha_Nac');
         $alumno->Semestre = $request->input('Semestre');
         $alumno->Carrera = $request->input('Carrera');
         
         $alumno->save();
         
-        Session::flash('message',"Modificado correctamente");
-        return redirect()->route('alumno.index');
+        Session::flash('message',"Alumno modificado correctamente");
+        return redirect()->route('alumnos.index');
     }
 
     //----Consultas
@@ -65,7 +65,8 @@ class AlumnoController extends Controller
     }
 
     //---Detalle
-    public function show(Alumno $alumno){
+    public function show(int $id){
+        $alumno = Alumno::find($id);
         return view('detalle', compact('alumno'));
     }
 }

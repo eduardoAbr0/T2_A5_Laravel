@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string("Num_Control")->unique();
             $table->string("Nombre");
-            $table->string("Primer_ap");
-            $table->string("Segundo_ap");
-            $table->date("Fecha_nac");
+            $table->string("Primer_Ap");
+            $table->string("Segundo_Ap");
+            $table->date("Fecha_Nac");
             $table->tinyInteger("Semestre");
             $table->string("Carrera");
 
