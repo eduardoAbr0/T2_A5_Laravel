@@ -83,8 +83,8 @@
                           @csrf
                           @method('PUT')
                           <div class="form-group">
-                            <label for="NumControl">Numero de control</label>
-                            <input type="text" class="form-control" id="NumControl" name="NumControl" value="{{ $alumno->Num_Control}}" required>
+                            <label for="Num_Control">Numero de control</label>
+                            <input type="text" class="form-control" id="Num_Control" name="Num_Control" value="{{ $alumno->Num_Control}}" required>
                           </div>
 
                           <div class="form-group">
@@ -94,7 +94,27 @@
 
                           <div class="form-group">
                             <label for="Primer_Ap">Primer apellido</label>
-                            <input type="text" class="form-control" id="Primer_Ap" name="Primer_Ap" value="{{ $alumno->Primer_ap}}" required>
+                            <input type="text" class="form-control" id="Primer_Ap" name="Primer_Ap" value="{{ $alumno->Primer_Ap}}" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="Segundo_Ap">Segundo apellido</label>
+                            <input type="text" class="form-control" id="Segundo_Ap" name="Segundo_Ap" value="{{ $alumno->Segundo_Ap}}" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="Fecha_Nac">Fecha nacimiento</label>
+                            <input type="text" class="form-control" id="Fecha_Nac" name="Fecha_Nac" value="{{ $alumno->Fecha_Nac}}" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="Semestre">Semestre</label>
+                            <input type="text" class="form-control" id="Semestre" name="Semestre" value="{{ $alumno->Semestre}}" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="Carrera">Carrera</label>
+                            <input type="text" class="form-control" id="Carrera" name="Carrera" value="{{ $alumno->Carrera}}" required>
                           </div>
 
                           <button type="submit" class="btn btn-success">Guardar</button>
