@@ -9,6 +9,9 @@
 
   <title>Detalle de Alumno</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -77,33 +80,55 @@
                     <div class="panel-body">
 
                       <section class="example mt-4">
-                      
-                        <h5>Numero de Control: </h5>
-                        <p id="num_control" class="example ml-4">{{object.numControl}}</p>
 
-                        <h5>Nombre: </h5>
-                        <p id="nombre">{{object.nombre}}</p>
+                        <form>
 
-                        <h5>Primer apellido: </h5>
-                        <p id="primer_ap">{{object.primerAp}}</p>
+                          <div class="form-group">
+                            <label for="Num_Control">Numero de control</label>
+                            <input type="text" class="form-control" id="Num_Control" value="{{ $alumno->Num_Control }}"
+                              readonly>
+                          </div>
 
-                        <h5>Segundo apellido: </h5>
-                        <p id="segundo_ap">{{object.segundoAp}}</p>
+                          <div class="form-group">
+                            <label for="Nombre">Nombre</label>
+                            <input type="text" class="form-control" id="Nombre" value="{{ $alumno->Nombre }}" readonly>
+                          </div>
 
-                        <h5>Fecha nacimiento: </h5>
-                        <p id="fecha_nac">{{object.fechaNac}}</p>
+                          <div class="form-group">
+                            <label for="Primer_Ap">Primer apellido</label>
+                            <input type="text" class="form-control" id="Primer_Ap" value="{{ $alumno->Primer_Ap }}"
+                              readonly>
+                          </div>
 
-                        <h5>Semestre: </h5>
-                        <p id="nombre">{{object.semestre}}</p>
+                          <div class="form-group">
+                            <label for="Segundo_Ap">Segundo apellido</label>
+                            <input type="text" class="form-control" id="Segundo_Ap" value="{{ $alumno->Segundo_Ap }}"
+                              readonly>
+                          </div>
 
-                        <h5>Carrera: </h5>
-                        <p id="nombre">{{object.carrera}}</p>
+                          <div class="form-group">
+                            <label for="Fecha_Nac">Fecha nacimiento</label>
+                            <input type="text" class="form-control" id="Fecha_Nac" value="{{ $alumno->Fecha_Nac }}"
+                              readonly>
+                          </div>
 
-                        
+                          <div class="form-group">
+                            <label for="Semestre">Semestre</label>
+                            <input type="text" class="form-control" id="Semestre" value="{{ $alumno->Semestre }}"
+                              readonly>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="Carrera">Carrera</label>
+                            <input type="text" class="form-control" id="Carrera" value="{{ $alumno->Carrera }}"
+                              readonly>
+                          </div>
+
+                          <hr>
+                          <a href="{{ route('alumnos.index') }}" class="btn btn-primary">Volver a la lista</a>
+                        </form>
+
                       </section>
-
-                      <a href="/alumnos" class="btn btn-warning mt-3">Volver</a>
-
 
                     </div>
 
