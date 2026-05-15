@@ -78,7 +78,7 @@
                       <section class="example mt-4">
 
 
-                        <form action="{{ route('alumnos.update', $alumno->Num_Control)  }}" method="POST">
+                        <form action="{{ route('alumnos.update', $alumno->id)  }}" method="POST">
                           <!--ENCTYPE ES IMPORTANTE -->
                           @csrf
                           @method('PUT')
