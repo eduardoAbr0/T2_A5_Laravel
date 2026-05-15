@@ -59,7 +59,7 @@ class AlumnoController extends Controller
             ->orWhere('Primer_Ap', 'like', '%{$filtro}%')
             ->orderBy('id', 'desc')->paginate(5);*/
 
-        $alumnos = Alumno::latest()->paginate(5);
+        $alumnos = Alumno::latest()->get();
         //return view('index', compact('alumnos','filtro'));
         return view('index', compact('alumnos'));
     }
